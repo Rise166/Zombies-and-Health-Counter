@@ -49,15 +49,15 @@ ZombieCounter()
     
     //creating Zombies word
     
-    flag_wait( "initial_blackscreen_passed" );
+
     self.zombie_text= createFontString("Objective", 1);
-    self.zombie_text setpoint ("CENTER", "CENTER", 320, 220);
+    self.zombie_text setpoint ("CENTER", "CENTER", 320, 230);
     self.zombie_text setText("Zombies");
     
     //creating actual counter
     
     self.zombie_counter = createFontString ("small", 1);
-    self.zombie_counter setpoint ("CENTER", "CENTER", 345, 220); 
+    self.zombie_counter setpoint ("CENTER", "CENTER", 345, 230); 
     self.zombie_counter.label = &"";
     self.zombie_counter.alpha = 1;
     
@@ -82,18 +82,18 @@ ZombieLeftCounter()
 {
     level endon("end_game");
     self endon("disconnect");
-    flag_wait( "initial_blackscreen_passed" );
+    // flag_wait( "initial_blackscreen_passed" );
     
 //creating Zombies word
     
     self.zombie1_text = createFontString("Objective", 1.5);
-    self.zombie1_text setpoint ("CENTER", "CENTER", -387, 130);
+    self.zombie1_text setpoint ("CENTER", "CENTER", 353, 110);
     self.zombie1_text setText("Zombies Alive");
     
 //creating actual counter
     
     self.zombie1_counter = createFontString ("small", 1.5);
-    self.zombie1_counter setpoint("CENTER", "CENTER", -340, 130);
+    self.zombie1_counter setpoint("CENTER", "CENTER", 400, 110);//less by 20
     self.zombie1_counter.label = &"";
     self.zombie1_counter.alpha = 1;
     
@@ -122,24 +122,24 @@ HeathCounter()
 {
     level endon("end_game");
     self endon("disconnect");
-    flag_wait( "initial_blackscreen_passed" );
+    // flag_wait( "initial_blackscreen_passed" );
     
 //creating Health word
     
     self.health_text = createFontString("Objective", 1.5);
-    self.health_text setpoint ("CENTER", "CENTER", -405, 90);
+    self.health_text setpoint ("CENTER", "CENTER", 340, 70);
     self.health_text setText("Health");
     
 // middle slash
     
     self.slash = createFontString("small", 1.5);
-    self.slash setpoint ("CENTER","CENTER", -360, 90);
+    self.slash setpoint ("CENTER","CENTER", 385, 70);
     self.slash setText("/");
     
 //creating current counter
     
     self.health_current = createFontString("small", 1.5);
-    self.health_current setpoint ("CENTER","CENTER", -375, 90);
+    self.health_current setpoint ("CENTER","CENTER", 370, 70);
     self.health_current.label = &"";
     self.health_current.alpha = 1;
     
@@ -173,9 +173,9 @@ HealthMax()
 {
     level endon("end_game");
     self endon("disconnect");
-    flag_wait( "initial_blackscreen_passed" );
+    // flag_wait( "initial_blackscreen_passed" );
     self.health_max = createFontString("small", 1.5);
-    self.health_max setpoint ("CENTER", "CENTER", -345, 90);
+    self.health_max setpoint ("CENTER", "CENTER", 400, 70);
     self.health_max.label = &"";
     self.health_max.alpha = 1;
     
