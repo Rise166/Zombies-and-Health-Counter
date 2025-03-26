@@ -46,10 +46,10 @@ ZombieCounter()
 {
     level endon("end_game");
     self endon("disconnect");
+    flag_wait( "initial_blackscreen_passed" );
     
     //creating Zombies word
     
-
     self.zombie_text= createFontString("Objective", 1);
     self.zombie_text setpoint ("CENTER", "CENTER", 320, 230);
     self.zombie_text setText("Zombies");
@@ -82,7 +82,7 @@ ZombieLeftCounter()
 {
     level endon("end_game");
     self endon("disconnect");
-    // flag_wait( "initial_blackscreen_passed" );
+    flag_wait( "initial_blackscreen_passed" );
     
 //creating Zombies word
     
@@ -122,7 +122,7 @@ HeathCounter()
 {
     level endon("end_game");
     self endon("disconnect");
-    // flag_wait( "initial_blackscreen_passed" );
+    flag_wait( "initial_blackscreen_passed" );
     
 //creating Health word
     
@@ -173,7 +173,7 @@ HealthMax()
 {
     level endon("end_game");
     self endon("disconnect");
-    // flag_wait( "initial_blackscreen_passed" );
+    flag_wait( "initial_blackscreen_passed" );
     self.health_max = createFontString("small", 1.5);
     self.health_max setpoint ("CENTER", "CENTER", 400, 70);
     self.health_max.label = &"";
